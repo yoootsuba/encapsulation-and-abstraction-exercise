@@ -1,4 +1,3 @@
-
 abstract class Vehicle {
     private String plateNumber;
     private String model;

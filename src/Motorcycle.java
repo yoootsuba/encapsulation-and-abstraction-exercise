@@ -1,4 +1,3 @@
-
 class Motorcycle extends Vehicle {
     private int displacement;
 

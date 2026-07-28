@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 class RentalSystem {
     private ArrayList<Vehicle> vehicles = new ArrayList<>();
 
