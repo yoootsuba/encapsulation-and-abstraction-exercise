@@ -172,7 +172,7 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.println("Exiting...");
+                    System.out.println("Byebye!");
                     break;
             }
         } while (choice != 5);
