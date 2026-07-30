@@ -22,7 +22,7 @@ class Car extends Vehicle {
 
     @Override
     public void displayDetails() {
-        System.out.printf("%-10s | %-8s | %-10s | %-8.2f | %-15s | %-10s%n",
+        System.out.printf("%-10s | %-8s | %-10s | %-8s | %-15s | %-10s%n",
                 "Car", getPlateNumber(), getModel(), getBaseRatePerDay(),
                 "Seats: " + seats, isAvailable() ? "Available" : "Rented");
     }

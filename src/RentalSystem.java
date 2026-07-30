@@ -22,7 +22,7 @@ class RentalSystem {
             return;
         }
 
-        System.out.printf("%-5s | %-8s | %-10s | %-8s | %-15s | %-10s%n",
+        System.out.printf("%-10s | %-8s | %-10s | %-8s | %-15s | %-10s%n",
                 "Type", "Plate", "Model", "Rate", "Extra Info", "Status");
         System.out.println("-------------------------------------------------------------");
 

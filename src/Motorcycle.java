@@ -22,7 +22,7 @@ class Motorcycle extends Vehicle {
 
     @Override
     public void displayDetails() {
-        System.out.printf("%-10s | %-8s | %-10s | %-8.2f | %-15s | %-10s%n",
+        System.out.printf("%-5s | %-8s | %-10s | %-8s | %-15s | %-10s%n",
                 "Motorcycle", getPlateNumber(), getModel(), getBaseRatePerDay(),
                 "CC: " + displacement, isAvailable() ? "Available" : "Rented");
     }
