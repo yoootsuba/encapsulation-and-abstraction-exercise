@@ -1,9 +1,18 @@
+
 class Car extends Vehicle {
+
     private int seats;
 
     public Car(String plateNumber, String model, double baseRatePerDay, int seats) {
         super(plateNumber, model, baseRatePerDay);
+        if (seats <= 0) {
+            throw new IllegalArgumentException("Seats must be greater than 0");
+        }
         this.seats = seats;
+    }
+
+    public int getSeats() {
+        return seats;
     }
 
     @Override
@@ -13,7 +22,8 @@ class Car extends Vehicle {
 
     @Override
     public void displayDetails() {
-        System.out.printf("Car | Plate: %s | Model: %s | Rate: %.2f | Seats: %d | Available: %s%n",
-                getPlateNumber(), getModel(), getBaseRatePerDay(), seats, isAvailable() ? "Yes" : "No");
+        System.out.printf("%-10s | %-8s | %-10s | %-8.2f | %-15s | %-10s%n",
+                "Car", getPlateNumber(), getModel(), getBaseRatePerDay(),
+                "Seats: " + seats, isAvailable() ? "Available" : "Rented");
     }
 }

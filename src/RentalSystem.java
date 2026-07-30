@@ -1,5 +1,8 @@
+
 import java.util.ArrayList;
+
 class RentalSystem {
+
     private ArrayList<Vehicle> vehicles = new ArrayList<>();
 
     public void addVehicle(Vehicle v) {
@@ -18,6 +21,11 @@ class RentalSystem {
             System.out.println("No vehicles available.");
             return;
         }
+
+        System.out.printf("%-5s | %-8s | %-10s | %-8s | %-15s | %-10s%n",
+                "Type", "Plate", "Model", "Rate", "Extra Info", "Status");
+        System.out.println("-------------------------------------------------------------");
+
         for (Vehicle v : vehicles) {
             v.displayDetails();
         }

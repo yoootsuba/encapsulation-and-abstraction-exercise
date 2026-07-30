@@ -1,9 +1,18 @@
+
 class Motorcycle extends Vehicle {
+
     private int displacement;
 
     public Motorcycle(String plateNumber, String model, double baseRatePerDay, int displacement) {
         super(plateNumber, model, baseRatePerDay);
+        if (displacement <= 0) {
+            throw new IllegalArgumentException("Engine displacement must be greater than 0");
+        }
         this.displacement = displacement;
+    }
+
+    public int getDisplacement() {
+        return displacement;
     }
 
     @Override
@@ -13,7 +22,9 @@ class Motorcycle extends Vehicle {
 
     @Override
     public void displayDetails() {
-        System.out.printf("Motorcycle | Plate: %s | Model: %s | Rate: %.2f | CC: %d | Available: %s%n",
-                getPlateNumber(), getModel(), getBaseRatePerDay(), displacement, isAvailable() ? "Yes" : "No");
+        System.out.printf("%-10s | %-8s | %-10s | %-8.2f | %-15s | %-10s%n",
+                "Motorcycle", getPlateNumber(), getModel(), getBaseRatePerDay(),
+                "CC: " + displacement, isAvailable() ? "Available" : "Rented");
     }
 }
+
